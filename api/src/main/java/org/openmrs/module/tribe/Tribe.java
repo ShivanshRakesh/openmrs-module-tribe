@@ -124,30 +124,6 @@ public class Tribe extends BaseOpenmrsMetadata implements java.io.Serializable, 
     public void setId(Integer id) {
         setTribeId(id);
     }
-
-    /**
-	 * @see org.openmrs.Attributable#findPossibleValues(java.lang.String)
-	 */
-	public List<Tribe> findPossibleValues(String searchText) {
-		try {
-			return ((TribeService) Context.getService(TribeService.class)).findTribes(searchText);
-		}
-		catch (Exception e) {
-			return Collections.emptyList();
-		}
-	}
-	
-	/**
-	 * @see org.openmrs.Attributable#getPossibleValues()
-	 */
-	public List<Tribe> getPossibleValues() {
-		try {
-			return ((TribeService) Context.getService(TribeService.class)).getTribes();
-		}
-		catch (Exception e) {
-			return Collections.emptyList();
-		}
-	}
 	
 	/**
 	 * @see org.openmrs.Attributable#hydrate(java.lang.String)
